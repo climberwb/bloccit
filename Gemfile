@@ -64,4 +64,6 @@ gem 'fog'
 gem 'quiet_assets',    group: :development
 gem 'thin',    group: :development
 
+gem 'will_paginate', '~> 3.0.5'
+
 
