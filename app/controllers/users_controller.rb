@@ -10,6 +10,11 @@ class UsersController < ApplicationController
       flash[:notice] = current_user.errors.inspect
     end
   end
+  
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.posts.visible_to(current_user)
+  end
 
 
   private
