@@ -67,4 +67,11 @@ gem 'thin',    group: :development
 
 gem 'will_paginate', '~> 3.0.5'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.0'
+end
 
+RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
+end
